@@ -1,18 +1,18 @@
 Summary:	tcpslice - extract pieces of and/or merge together pcap files
 Summary(pl.UTF-8):	tcpslice - wydobywanie fragmentów i/lub łączenie plików pcap
 Name:		tcpslice
-Version:	1.3
-Release:	3
+Version:	1.5
+Release:	1
 License:	BSD
 Group:		Networking/Utilities
-Source0:	http://www.tcpdump.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	7342da221f50964b6fd54c235f032f7e
-URL:		http://www.tcpdump.org/
+Source0:	https://www.tcpdump.org/release/%{name}-%{version}.tar.gz
+# Source0-md5:	8907e60376e629f6e6ce2255988aaf47
+URL:		https://www.tcpdump.org/
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	libnids-devel
 BuildRequires:	libosip2-devel
 BuildRequires:	libpcap-devel
-BuildRequires:	ooh323c-devel
+BuildRequires:	ooh323c-devel >= 0.9.3-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CREDITS README
-%attr(755,root,root) %{_sbindir}/tcpslice
+%doc CHANGES CREDITS README.md
+%attr(755,root,root) %{_bindir}/tcpslice
 %{_mandir}/man1/tcpslice.1*
