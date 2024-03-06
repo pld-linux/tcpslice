@@ -1,18 +1,20 @@
 Summary:	tcpslice - extract pieces of and/or merge together pcap files
 Summary(pl.UTF-8):	tcpslice - wydobywanie fragmentów i/lub łączenie plików pcap
 Name:		tcpslice
-Version:	1.6
+Version:	1.7
 Release:	1
 License:	BSD
 Group:		Networking/Utilities
-Source0:	https://www.tcpdump.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	4d2cd8c0de935265cb20ce75d1f1aa46
+Source0:	https://www.tcpdump.org/release/%{name}-%{version}.tar.xz
+# Source0-md5:	6a4fdce65c9ea20d1716303f9fb66f71
 URL:		https://www.tcpdump.org/
-BuildRequires:	autoconf >= 2.64
+BuildRequires:	autoconf >= 2.69
 BuildRequires:	libnids-devel
 BuildRequires:	libosip2-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	ooh323c-devel >= 0.9.3-3
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
